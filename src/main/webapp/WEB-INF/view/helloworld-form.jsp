@@ -14,7 +14,7 @@
     <body>
         <h1>Hello World!</h1>
         
-        <form action="processForm" method="GET">
+        <form action="processFormV2" method="GET">
             
             <input type="text" name="studentName"
                    placeholder="What's your name?" />
