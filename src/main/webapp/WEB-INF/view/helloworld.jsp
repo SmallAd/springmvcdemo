@@ -1,6 +1,6 @@
 <%-- 
-    Document   : main-menu
-    Created on : 08.11.2019, 0:43:54
+    Document   : helloworld
+    Created on : 08.11.2019, 23:41:49
     Author     : smallad
 --%>
 
@@ -9,13 +9,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Home Page</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <h2>Spring MVC Demo - Home Page</h2>
+        <h1>Hello World of Spring!</h1>
         
-        <hr>
+        <br><br>
         
-        <a href="showForm">Hello World Form</a>
+        Student name: ${param.studentName}
     </body>
 </html>
