@@ -1,9 +1,9 @@
 package testgroup.springmvcdemo.controller;
 
-import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  *
@@ -23,8 +23,9 @@ public class HelloWorldController {
     }
     
     @RequestMapping("/processFormV2")
-    public String processUpperForm(HttpServletRequest request, Model model) {
-        String studentName = request.getParameter("studentName");
+    public String processUpperForm(
+            @RequestParam("studentName") String studentName, 
+            Model model) {
         String result = "Hi! " + studentName.toUpperCase();
         model.addAttribute("message", result);
         return "helloworld";
