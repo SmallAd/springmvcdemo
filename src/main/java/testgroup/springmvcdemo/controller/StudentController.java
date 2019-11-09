@@ -8,12 +8,14 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import testgroup.springmvcdemo.model.Student;
 import testgroup.springmvcdemo.service.CountryService;
+import testgroup.springmvcdemo.service.LanguageService;
 
 @Controller
 @RequestMapping("/student")
 public class StudentController {
     
     private CountryService countryService;
+    private LanguageService languageService;
 
     @Autowired
     @Qualifier(value = "propertyCountryService")
@@ -21,11 +23,17 @@ public class StudentController {
         this.countryService = countryService;
     }
 
+    @Autowired
+    public void setLanguageService(LanguageService languageService) {
+        this.languageService = languageService;
+    }
+    
     @RequestMapping("/showForm")
     public String showForm(Model model) {
         Student student = new Student();
         model.addAttribute("student", student);
         model.addAttribute("counties", countryService.getCountries());
+        model.addAttribute("languages", languageService.getLanguages());
 
         return "student-form";
     }
