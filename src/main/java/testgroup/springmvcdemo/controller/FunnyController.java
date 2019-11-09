@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author smallad
  */
 @Controller
-public class FnnyController {
+public class FunnyController {
     
     @RequestMapping("/showForm")
     public String showForm() {
