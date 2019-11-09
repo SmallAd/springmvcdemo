@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author smallad
  */
 @Controller
+@RequestMapping("/hello")
 public class HelloWorldController {
 
     @RequestMapping("/showForm")
