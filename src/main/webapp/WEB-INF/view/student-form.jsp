@@ -26,10 +26,8 @@
             
             Country:
             <form:select path="country">
-                <form:option value="Brazil" label="Brazil" />
-                <form:option value="China" label="China" />
-                <form:option value="India" label="India" />
-                <form:option value="Poland" label="Poland" />
+                <form:options items="${counties}" />
+
             </form:select>
             
             <br><br>
