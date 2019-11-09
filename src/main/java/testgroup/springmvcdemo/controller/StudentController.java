@@ -16,7 +16,7 @@ public class StudentController {
     private CountryService countryService;
 
     @Autowired
-    @Qualifier(value = "localCountryService")
+    @Qualifier(value = "propertyCountryService")
     public void setCountryService(CountryService countryService) {
         this.countryService = countryService;
     }
