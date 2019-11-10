@@ -11,26 +11,31 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Student Registration Form</title>
-        
+
         <style>
             .error {color: red}
         </style>
     </head>
     <body>
-        
+
         <form:form action="processForm" modelAttribute="customer">
-            
-            First name: <form:input path="firstName" />
-            
+
+            First Name: <form:input path="firstName" />
+
             <br><br>
-            
+
             Last Name*: <form:input path="lastName" />
             <form:errors path="lastName" cssClass="error" />
-                        
+
+            <br><br>
+
+            Free passes: <form:input maxlength="2" path="freePasses" />
+            <form:errors path="freePasses" cssClass="error" />
+            
             <br><br>
             <input type="submit" value="Submit" />
-            
+
         </form:form>
-        
+
     </body>
 </html>
