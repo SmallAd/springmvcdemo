@@ -11,6 +11,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Student Registration Form</title>
+        
+        <style>
+            .error {color: red}
+        </style>
     </head>
     <body>
         
@@ -20,7 +24,8 @@
             
             <br><br>
             
-            Last Name: <form:input path="lastName" />
+            Last Name*: <form:input path="lastName" />
+            <form:errors path="lastName" cssClass="error" />
             
             <br><br>
             
